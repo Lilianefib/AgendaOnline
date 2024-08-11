@@ -1,0 +1,58 @@
+﻿@model AgendaModel;
+@{
+    ViewData["title"] = "Cadastrar Usuário";
+}
+
+<div class="container bg-dark p-5 rounded-5">
+
+    <div class="mb-5 text-center">
+        <h1 class="text-light">Cadastro de Usuário</h1>
+    </div>
+
+    <form method="post" asp-controller="Agenda" asp-action="Cadastrar">
+        
+        <div class="mb-3">
+            <label for="Nome" class="form-label text-light">Nome</label>
+            <input type="text" class="form-control" asp-for= "Name" id="Nome" placeholder="Nome do Usuário">
+            <span class="text-danger" asp-validation-for="Name"></span>
+        </div>
+    
+        <div class="mb-3">
+                <label for="Gerencia" class="form-label text-light">Gerência</label>
+                <input type="text" class="form-control" asp-for="Gerencia" id="gerencia" placeholder="Sigla da Gerência">
+                <span class="text-danger" asp-validation-for="Gerencia"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="Ramal" class="form-label text-light">Ramal</label>
+            <input type="text" class="form-control" asp-for="Ramal" id="ramal" placeholder="Ramal Telefônico">
+            <span class="text-danger" asp-validation-for="Ramal"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="Usuario" class="form-label text-light">Usuário</label>
+            <input type="text" class="form-control" asp-for="Usuario" id="usuario" placeholder="Sigla do Usuário">
+            <span class="text-danger" asp-validation-for="Usuario"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="Funcao" class="form-label text-light">Função</label>
+            <input type="funcao" class="form-control" asp-for="Funcao" id="funcao" placeholder="Função">
+            <span class="text-danger" asp-validation-for="Funcao"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="Email" class="form-label text-light">E-mail</label>
+            <input type="email" class="form-control" asp-for="Email" id="email" placeholder="E-mail">
+            <span class="text-danger" asp-validation-for="Email"></span>
+        </div>
+
+        <div class="d-flex gap-5 mt-5">
+            <button type="submit" class="btn btn-success w-50">Adicionar</button>
+            <a class="btn btn-primary w-50" asp-controller="Agenda" asp-action="Index">Voltar</a>
+        </div>
+
+    
+    </form>
+
+</div>

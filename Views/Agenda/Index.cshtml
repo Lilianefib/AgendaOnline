@@ -1,0 +1,61 @@
+﻿@model IEnumerable<AgendaModel>;
+
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-5">
+        <h1>Agenda</h1>
+        <div>
+            <a class="btn btn-success mx-2" asp-controller="Agenda" asp-action="Exportar"><i class="bi bi-file-earmark-plus mx-2"></i> Exportar</a>
+            <a class="btn btn-success mx-2" asp-controller="Agenda" asp-action="Cadastrar"><i class="bi bi-file-earmark-plus mx-2"></i> Cadastrar Novo Usuário</a>
+        </div>
+    </div>
+
+    @if(TempData["MensagemSucesso"] != null)
+    {
+        <div class="alert alert-success text-light" role="alert">
+            @TempData["MensagemSucesso"]
+        </div>
+    }
+    @if(TempData["MensagemErro"] != null)
+    {
+        <div class="alert alert-danger text-light" role="alert">
+            @TempData["MensagemErro"]
+        </div>
+    }
+    <table id="Agenda" class="table table-light table-hover mt-5">
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Gerência</th>
+                <th scope="col">Ramal</th>
+                <th scope="col">Usuario</th>
+                <th scope="col">Função</th>
+                <th scope="col">E-mail</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+        @if(Model != null)
+        {
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <th scope="row">@item.Name</th>
+                    <td>@item.Gerencia</td>
+                    <td>@item.Ramal</td>
+                    <td>@item.Usuario</td>
+                    <td>@item.Funcao</td>
+                    <td>@item.Email</td>
+                    <td>
+                            <a class="btn btn-warning mx-2" asp-controller="Agenda" asp-route-id="@item.Id" asp-action="Editar"><i class="bi bi-pencil-square mx-2"></i>Editar</a>
+                            <a class="btn btn-danger mx-2" asp-controller="Agenda" asp-route-id="@item.Id" asp-action="Excluir"><i class="bi bi-trash3-fill mx-2"></i>Excluir</a>
+                    </td>
+                </tr>
+            }
+            
+            
+        }
+        
+        </tbody>
+    </table>
+</div>
