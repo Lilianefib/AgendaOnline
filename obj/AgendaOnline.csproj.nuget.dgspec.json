@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\AgendaOnline\\AgendaOnline\\AgendaOnline.csproj": {}
+    "C:\\Users\\LILIANE\\source\\repos\\AgendaOnline\\AgendaOnline\\AgendaOnline.csproj": {}
   },
   "projects": {
-    "C:\\AgendaOnline\\AgendaOnline\\AgendaOnline.csproj": {
+    "C:\\Users\\LILIANE\\source\\repos\\AgendaOnline\\AgendaOnline\\AgendaOnline.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\AgendaOnline\\AgendaOnline\\AgendaOnline.csproj",
+        "projectUniqueName": "C:\\Users\\LILIANE\\source\\repos\\AgendaOnline\\AgendaOnline\\AgendaOnline.csproj",
         "projectName": "AgendaOnline",
-        "projectPath": "C:\\AgendaOnline\\AgendaOnline\\AgendaOnline.csproj",
+        "projectPath": "C:\\Users\\LILIANE\\source\\repos\\AgendaOnline\\AgendaOnline\\AgendaOnline.csproj",
         "packagesPath": "C:\\Users\\LILIANE\\.nuget\\packages\\",
-        "outputPath": "C:\\AgendaOnline\\AgendaOnline\\obj\\",
+        "outputPath": "C:\\Users\\LILIANE\\source\\repos\\AgendaOnline\\AgendaOnline\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LILIANE\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -69,6 +69,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.6, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [

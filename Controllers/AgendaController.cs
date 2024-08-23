@@ -1,5 +1,6 @@
 ﻿using AgendaOnline.Data;
 using AgendaOnline.Models;
+using AgendaOnline.Services.SessaoService;
 using ClosedXML.Excel;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
@@ -11,13 +12,20 @@ namespace AgendaOnline.Controllers
     {
 
         readonly private AplicationDBContext _db;
-        public AgendaController(AplicationDBContext db)
+        readonly private ISessaoInterface _sessaoInterface;
+        public AgendaController(AplicationDBContext db, ISessaoInterface sessaoInterface)
         {
             _db = db;
+            _sessaoInterface = sessaoInterface;
         }
 
         public IActionResult Index()
         {
+            var usuario = _sessaoInterface.BuscarSessao();
+            if (usuario == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
             IEnumerable<AgendaModel> itens = _db.Agenda;
             return View(itens);
         }
@@ -25,12 +33,23 @@ namespace AgendaOnline.Controllers
         [HttpGet]
         public IActionResult Cadastrar()
         {
+            var usuario = _sessaoInterface.BuscarSessao();
+            if (usuario == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
             return View();
         }
 
         [HttpGet]
         public IActionResult Editar(int? id)
         {
+            var usuario = _sessaoInterface.BuscarSessao();
+            if (usuario == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+
             if (id == null || id == 0)
             {
                 return NotFound();
@@ -49,6 +68,12 @@ namespace AgendaOnline.Controllers
 
         public IActionResult Excluir(int? id)
         {
+            var usuario = _sessaoInterface.BuscarSessao();
+            if (usuario == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+
             if (id == null || id == 0)
             {
                 return NotFound();

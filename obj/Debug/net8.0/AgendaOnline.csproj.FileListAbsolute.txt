@@ -277,3 +277,13 @@ C:\AgendaOnline\AgendaOnline\bin\Debug\net8.0\Irony.dll
 C:\AgendaOnline\AgendaOnline\bin\Debug\net8.0\SixLabors.Fonts.dll
 C:\AgendaOnline\AgendaOnline\bin\Debug\net8.0\System.IO.Packaging.dll
 C:\AgendaOnline\AgendaOnline\bin\Debug\net8.0\XLParser.dll
+C:\AgendaOnline\AgendaOnline\obj\Debug\net8.0\AgendaOnline.sourcelink.json
+C:\Users\LILIANE\source\repos\AgendaOnline\AgendaOnline\obj\Debug\net8.0\AgendaOnline.sourcelink.json
+C:\Users\LILIANE\source\repos\AgendaOnline\AgendaOnline\bin\Debug\net8.0\ClosedXML.dll
+C:\Users\LILIANE\source\repos\AgendaOnline\AgendaOnline\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+C:\Users\LILIANE\source\repos\AgendaOnline\AgendaOnline\bin\Debug\net8.0\ExcelNumberFormat.dll
+C:\Users\LILIANE\source\repos\AgendaOnline\AgendaOnline\bin\Debug\net8.0\Irony.dll
+C:\Users\LILIANE\source\repos\AgendaOnline\AgendaOnline\bin\Debug\net8.0\SixLabors.Fonts.dll
+C:\Users\LILIANE\source\repos\AgendaOnline\AgendaOnline\bin\Debug\net8.0\System.IO.Packaging.dll
+C:\Users\LILIANE\source\repos\AgendaOnline\AgendaOnline\bin\Debug\net8.0\XLParser.dll
+C:\Users\LILIANE\source\repos\AgendaOnline\AgendaOnline\bin\Debug\net8.0\Newtonsoft.Json.dll
